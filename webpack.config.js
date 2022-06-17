@@ -13,12 +13,10 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: join(__dirname, 'public/index.html')
-        })
-    ],
-    plugins: [
+        }),
         // 请确保引入这个插件！
         new VueLoaderPlugin()
-      ],
+    ],
     devServer: {
         open: true,
         port: 30000
