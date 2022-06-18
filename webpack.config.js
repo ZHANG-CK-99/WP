@@ -1,4 +1,8 @@
+
+
+
 // webpack.config.js
+const EslintWebpackConfig = require('eslint-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {join} = require('path');
@@ -13,6 +17,10 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: join(__dirname, 'public/index.html')
+        }),
+
+        new EslintWebpackConfig({
+            context: join(__dirname, 'src/')
         }),
         // 请确保引入这个插件！
         new VueLoaderPlugin()

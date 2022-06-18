@@ -21,7 +21,7 @@ const fn = () => {
 
 console.log(fn);
 
-import app  from './app.vue';
+// import App from './app.vue';
 
 // const myVue = new Vue({
     
